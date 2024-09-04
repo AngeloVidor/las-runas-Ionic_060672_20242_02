@@ -1,0 +1,7 @@
+{
+  "name": "las runas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
