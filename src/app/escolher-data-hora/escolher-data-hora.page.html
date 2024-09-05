@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Escolha Data e Hora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6">
+        <ion-item>
+          <ion-label>Serviço</ion-label>
+          <ion-input [value]="nomeServico" readonly></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Preço</ion-label>
+          <ion-input [value]="'R$ ' + precoServico" readonly></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Barbeiro</ion-label>
+          <ion-input [value]="barbeiro" readonly></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12" size-md="6">
+        <ion-item>
+          <ion-label>Data</ion-label>
+          <ion-datetime [(ngModel)]="data" displayFormat="DD MMM YYYY"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Hora</ion-label>
+          <ion-datetime [(ngModel)]="hora" displayFormat="HH:mm" pickerFormat="HH:mm"></ion-datetime>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12" size-md="6">
+        <ion-button expand="full" (click)="confirmarAgendamento()">Confirmar Agendamento</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,33 @@
+/* escolher-data-hora.page.scss */
+ion-item {
+    margin-bottom: 15px;
+  }
+  
+  ion-datetime {
+    width: 100%;
+  }
+  
+  ion-button {
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    ion-item {
+      font-size: 0.9rem;
+    }
+  
+    ion-button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    ion-item {
+      font-size: 0.8rem;
+    }
+  
+    ion-button {
+      font-size: 0.8rem;
+    }
+  }
+  

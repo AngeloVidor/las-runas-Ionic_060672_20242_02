@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Escolha seu Barbeiro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngFor="let barbeiro of barbeiros" (click)="selecionarBarbeiro(barbeiro)" class="barbeiro-card">
+    <ion-card>
+      <img [src]="barbeiro.foto" alt="{{ barbeiro.nome }}" class="barbeiro-foto">
+      <ion-card-header>
+        <ion-card-title>{{ barbeiro.nome }}</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </div>
+</ion-content>
