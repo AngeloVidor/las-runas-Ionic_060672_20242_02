@@ -13,15 +13,15 @@
     <ion-row class="centralizar-itens">
       <ion-col size="12" size-md="6">
         <ion-item>
-          <ion-label>Serviço</ion-label>
+          <ion-label>Serviço:</ion-label>
           <ion-input [value]="nomeServico" readonly></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label>Preço</ion-label>
+          <ion-label>Preço:</ion-label>
           <ion-input [value]="'R$ ' + precoServico" readonly></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label>Barbeiro</ion-label>
+          <ion-label>Barbeiro:</ion-label>
           <ion-input [value]="barbeiro" readonly></ion-input>
         </ion-item>
       </ion-col>
@@ -30,7 +30,7 @@
     <ion-row class="centralizar-datetime">
       <ion-col size="12" size-md="6">
         <ion-item>
-          <ion-label>Data</ion-label>
+          <ion-label>Data:</ion-label>
           <ion-datetime
             [(ngModel)]="data"
             displayFormat="DD MMM YYYY"
@@ -39,10 +39,10 @@
           </ion-datetime>
         </ion-item>
         <ion-item>
-          <ion-label>Hora</ion-label>
+          <ion-label>Hora:</ion-label>
           <ion-input
             [(ngModel)]="hora"
-            placeholder=": HH:MM"
+            placeholder=" HH:MM"
             type="text">
           </ion-input>
         </ion-item>

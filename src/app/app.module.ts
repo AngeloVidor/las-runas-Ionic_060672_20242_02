@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-import { FormsModule } from '@angular/forms'; // FormsModule para o uso de formulários
-import { IonicStorageModule } from '@ionic/storage-angular'; // Ionic Storage para persistência de dados
-import { HttpClientModule } from '@angular/common/http'; // HTTP para requisições
+import { FormsModule } from '@angular/forms'; 
+import { IonicStorageModule } from '@ionic/storage-angular'; 
+import { HttpClientModule } from '@angular/common/http'; 
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';

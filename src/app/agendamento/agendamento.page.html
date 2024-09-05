@@ -9,12 +9,14 @@
     <h1>Las Runas</h1>
   </div>
 
-  <div *ngFor="let barbeiro of barbeiros" (click)="selecionarBarbeiro(barbeiro)" class="barbeiro-card">
-    <ion-card>
-      <img [src]="barbeiro.foto" alt="{{ barbeiro.nome }}" class="barbeiro-foto">
-      <ion-card-header>
-        <ion-card-title>{{ barbeiro.nome }}</ion-card-title>
-      </ion-card-header>
-    </ion-card>
+  <div class="barbeiro-container">
+    <div *ngFor="let barbeiro of barbeiros" (click)="selecionarBarbeiro(barbeiro)" class="barbeiro-card">
+      <ion-card>
+        <img [src]="barbeiro.foto" alt="{{ barbeiro.nome }}" class="barbeiro-foto">
+        <ion-card-header>
+          <ion-card-title>{{ barbeiro.nome }}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </div>
   </div>
 </ion-content>
