@@ -16,9 +16,9 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    FormsModule, // Adiciona o FormsModule para trabalhar com formulários
-    HttpClientModule, // Opcional, para requisições HTTP
-    IonicStorageModule.forRoot() // Adiciona o IonicStorageModule para armazenamento local
+    FormsModule,
+    HttpClientModule, 
+    IonicStorageModule.forRoot() 
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
