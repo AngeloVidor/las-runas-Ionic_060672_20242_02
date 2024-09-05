@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Meus Agendamentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="header-content">
+    <h1>Las Runas</h1>
+  </div>
+
+  <div class="content-center">
+    <div *ngIf="agendamento" class="agendamento-info">
+      <h2>Seu agendamento:</h2>
+      <p>Barbeiro: {{ agendamento.barbeiro }}</p>
+      <p>Serviço: {{ agendamento.servico }}</p>
+      <p>Data: {{ agendamento.data }}</p>
+      <p>Hora: {{ agendamento.hora }}</p>
+    </div>
+    <div *ngIf="!agendamento" class="no-agendamento">
+      <p>Você ainda não tem nenhum agendamento.</p>
+    </div>
+  </div>
+</ion-content>

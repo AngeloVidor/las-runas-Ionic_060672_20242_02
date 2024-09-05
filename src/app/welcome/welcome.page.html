@@ -5,8 +5,16 @@
 </ion-header>
 
 <ion-content padding>
+  <div class="header-text">
+    <h1>Las Runas</h1>
+  </div>
+
   <div class="center-content">
     <h2>Bem-vindo, {{ nomeUsuario }}!</h2>
     <ion-button expand="full" (click)="novoAgendamento()">Novo Agendamento</ion-button>
+
+    <ion-button expand="full" color="primary" *ngIf="temAgendamento" (click)="verAgendamentos()">
+      Ver Meus Agendamentos
+    </ion-button>
   </div>
 </ion-content>

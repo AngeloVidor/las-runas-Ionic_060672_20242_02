@@ -5,17 +5,29 @@
 </ion-header>
 
 <ion-content padding>
+  <div class="header-text">
+    <h1>Las Runas</h1>
+  </div>
+
   <form [formGroup]="registrarForm" (ngSubmit)="onSubmit()">
     <ion-item>
       <ion-label position="floating">Nome</ion-label>
-      <ion-input formControlName="nome" type="text" required></ion-input>
+      <ion-input type="text" formControlName="nome"></ion-input>
     </ion-item>
+    <div *ngIf="registrarForm.controls['nome'].invalid && registrarForm.controls['nome'].touched">
+      <p>O nome é obrigatório</p>
+    </div>
 
     <ion-item>
       <ion-label position="floating">Telefone</ion-label>
-      <ion-input formControlName="telefone" type="tel" required></ion-input>
+      <ion-input type="text" formControlName="telefone"></ion-input>
     </ion-item>
+    <div *ngIf="registrarForm.controls['telefone'].invalid && registrarForm.controls['telefone'].touched">
+      <p>Telefone inválido (somente 10 ou 11 dígitos).</p>
+    </div>
 
-    <ion-button expand="full" type="submit" [disabled]="!registrarForm.valid">Registrar</ion-button>
+    <ion-button expand="full" type="submit" [disabled]="registrarForm.invalid">
+      Registrar
+    </ion-button>
   </form>
 </ion-content>

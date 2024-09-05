@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'escolher-data-hora',
     loadChildren: () => import('./escolher-data-hora/escolher-data-hora.module').then(m => m.EscolherDataHoraPageModule)
+  },  {
+    path: 'meus-agendamentos',
+    loadChildren: () => import('./meus-agendamentos/meus-agendamentos.module').then( m => m.MeusAgendamentosPageModule)
   },
+
 ];
 
 @NgModule({

@@ -5,6 +5,10 @@
 </ion-header>
 
 <ion-content padding>
+  <div class="header-content">
+    <h1>Las Runas</h1>
+  </div>
+
   <div *ngFor="let barbeiro of barbeiros" (click)="selecionarBarbeiro(barbeiro)" class="barbeiro-card">
     <ion-card>
       <img [src]="barbeiro.foto" alt="{{ barbeiro.nome }}" class="barbeiro-foto">

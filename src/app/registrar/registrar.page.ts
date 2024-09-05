@@ -15,8 +15,11 @@ export class RegistrarPage {
     private router: Router
   ) {
     this.registrarForm = this.formBuilder.group({
-      nome: ['', [Validators.required]],
-      telefone: ['', [Validators.required, Validators.pattern('^[0-9]{10,11}$')]],
+      nome: ['', [Validators.required]], 
+      telefone: [
+        '',
+        [Validators.required, Validators.pattern('^[0-9]{10,11}$')], 
+      ],
     });
   }
 
@@ -27,7 +30,7 @@ export class RegistrarPage {
 
       this.saveData(nome, telefone);
 
-      this.router.navigate(['/welcome', { nome }]);
+      this.router.navigate(['/welcome']);
     } else {
       console.log('Formulário inválido');
     }
@@ -35,6 +38,6 @@ export class RegistrarPage {
 
   saveData(nome: string, telefone: string) {
     const usuario = { nome, telefone };
-    localStorage.setItem('usuario', JSON.stringify(usuario));
+    localStorage.setItem('usuario', JSON.stringify(usuario)); 
   }
 }

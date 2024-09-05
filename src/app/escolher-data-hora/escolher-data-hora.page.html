@@ -5,8 +5,12 @@
 </ion-header>
 
 <ion-content padding>
+  <div class="header-content">
+    <h1>Las Runas</h1>
+  </div>
+
   <ion-grid>
-    <ion-row>
+    <ion-row class="centralizar-itens">
       <ion-col size="12" size-md="6">
         <ion-item>
           <ion-label>Serviço</ion-label>
@@ -23,20 +27,29 @@
       </ion-col>
     </ion-row>
 
-    <ion-row>
+    <ion-row class="centralizar-datetime">
       <ion-col size="12" size-md="6">
         <ion-item>
           <ion-label>Data</ion-label>
-          <ion-datetime [(ngModel)]="data" displayFormat="DD MMM YYYY"></ion-datetime>
+          <ion-datetime
+            [(ngModel)]="data"
+            displayFormat="DD MMM YYYY"
+            min="2024-01-01"
+            placeholder="Escolha a Data">
+          </ion-datetime>
         </ion-item>
         <ion-item>
           <ion-label>Hora</ion-label>
-          <ion-datetime [(ngModel)]="hora" displayFormat="HH:mm" pickerFormat="HH:mm"></ion-datetime>
+          <ion-input
+            [(ngModel)]="hora"
+            placeholder=": HH:MM"
+            type="text">
+          </ion-input>
         </ion-item>
       </ion-col>
     </ion-row>
 
-    <ion-row>
+    <ion-row class="centralizar-botao">
       <ion-col size="12" size-md="6">
         <ion-button expand="full" (click)="confirmarAgendamento()">Confirmar Agendamento</ion-button>
       </ion-col>

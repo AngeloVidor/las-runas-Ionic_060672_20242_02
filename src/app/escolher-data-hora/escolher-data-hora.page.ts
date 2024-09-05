@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Storage } from '@ionic/storage-angular';
 
 @Component({
   selector: 'app-escolher-data-hora',
@@ -13,21 +14,26 @@ export class EscolherDataHoraPage implements OnInit {
   data: string = ''; 
   hora: string = ''; 
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router, private storage: Storage) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.nomeServico = params['nomeServico'] || '';
       this.precoServico = +params['precoServico'] || 0;
       this.barbeiro = params['barbeiro'] || '';
     });
+
+    await this.storage.create();
   }
 
-  confirmarAgendamento() {
-    console.log(`Serviço: ${this.nomeServico}`);
-    console.log(`Preço: R$ ${this.precoServico}`);
-    console.log(`Barbeiro: ${this.barbeiro}`);
-    console.log(`Data: ${this.data}`);
-    console.log(`Hora: ${this.hora}`);
+  async confirmarAgendamento() {
+    await this.storage.set('agendamento', {
+      barbeiro: this.barbeiro,
+      servico: this.nomeServico,
+      data: this.data,
+      hora: this.hora
+    });
+
+    this.router.navigate(['/welcome']);
   }
 }

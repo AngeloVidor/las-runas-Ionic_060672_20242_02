@@ -5,8 +5,14 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Bem-vindo, {{ barbeiro }}</h2>
-  <p>Escolha o serviço desejado:</p>
+  <div class="header-content">
+    <h1>Las Runas</h1>
+  </div>
+
+  <div class="centralizar-conteudo">
+    <h2>Você escolheu, {{ barbeiro }}</h2>
+    <p>Escolha o serviço desejado:</p>
+  </div>
 
   <ion-list>
     <ion-item button (click)="agendarServico('Corte', 32)">

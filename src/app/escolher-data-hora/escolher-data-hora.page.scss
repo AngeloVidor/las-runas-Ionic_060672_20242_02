@@ -1,0 +1,43 @@
+.header-content {
+    text-align: center; 
+    margin-bottom: 2rem;
+  }
+  
+  .header-content h1 {
+    font-size: 2rem; 
+    color: #6d4c41; 
+    margin: 0; 
+  }
+  
+  .centralizar-itens {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+  }
+  
+  .centralizar-itens ion-item {
+    margin-bottom: 1rem; 
+  }
+  
+  .centralizar-itens ion-label {
+    margin-right: 1rem; 
+  }
+  
+  .centralizar-datetime {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+  }
+  
+  .centralizar-datetime ion-item {
+    margin-bottom: 1rem; 
+  }
+  
+  .centralizar-botao {
+    display: flex; 
+    justify-content: center; 
+    margin-top: 2rem; 
+  }
+  
