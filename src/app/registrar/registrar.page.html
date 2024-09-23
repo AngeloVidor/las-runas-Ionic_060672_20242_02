@@ -10,16 +10,16 @@
   </div>
 
   <form [formGroup]="registrarForm" (ngSubmit)="onSubmit()">
-    <ion-item>
-      <ion-label position="floating">Nome</ion-label>
+    <ion-item class="center-label">
+      <ion-label position="floating">Nome:</ion-label>
       <ion-input type="text" formControlName="nome"></ion-input>
     </ion-item>
     <div *ngIf="registrarForm.controls['nome'].invalid && registrarForm.controls['nome'].touched">
       <p>O nome é obrigatório</p>
     </div>
 
-    <ion-item>
-      <ion-label position="floating">Telefone</ion-label>
+    <ion-item class="center-label">
+      <ion-label position="floating">Telefone:</ion-label>
       <ion-input type="text" formControlName="telefone"></ion-input>
     </ion-item>
     <div *ngIf="registrarForm.controls['telefone'].invalid && registrarForm.controls['telefone'].touched">

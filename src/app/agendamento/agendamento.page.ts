@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
 })
 export class AgendamentoPage implements OnInit {
   barbeiros = [
-    { nome: 'Barbeiro 1', foto: 'assets/imgs/barbeiro1.jpg' },
-    { nome: 'Barbeiro 2', foto: 'assets/imgs/barbeiro2.jpg' },
-    { nome: 'Barbeiro 3', foto: 'assets/imgs/barbeiro3.jpg' }
+    { nome: 'Felipe', foto: 'assets/imgs/barbeiro1.jpg' },
+    { nome: 'Roni', foto: 'assets/imgs/barbeiro2.jpg' },
+    { nome: 'Rodrigo', foto: 'assets/imgs/barbeiro3.jpg' }
   ];
 
   constructor(private router: Router) {}
